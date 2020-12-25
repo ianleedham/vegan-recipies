@@ -31,10 +31,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss", 
+              "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -95,9 +98,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           }
         },
         "lint": {
@@ -117,7 +124,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "vegan-recipies:serve"
+            "devServerTarget": "vegan-recipes:serve"
           },
           "configurations": {
             "production": {
@@ -128,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "vegan-recipies"
+  "defaultProject": "vegan-recipies",
+  "cli": {
+    "analytics": false
+  }
 }
